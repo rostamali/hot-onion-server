@@ -26,7 +26,7 @@ async function run() {
         app.get('/products', async (req, res)=>{
             const products = productCollection.find({});
             const result = await products.toArray();
-            res.send(result);
+            res.json(result);
         })
 
     }finally{
